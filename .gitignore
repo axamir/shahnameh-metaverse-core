@@ -6,3 +6,4 @@ dist/
 deployed_address.txt
 deployed_sepolia.json
 *.log
+.env
