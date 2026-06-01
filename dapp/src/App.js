@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { ethers } from 'ethers';
+import { useTranslation } from './hooks/useTranslation';
 import TribeRegistryABI from './abis/TribeRegistry.json';
 
-const TRIBE_REGISTRY_ADDRESS = '0x2153aF28d9bC7e2E914F41D4b1a0FC3d98d750BC';
+const TRIBE_REGISTRY_ADDRESS = 'PLACEHOLDER_TR';
 
 function App() {
+  const { t, lang, toggleLang, direction } = useTranslation();
   const [provider, setProvider] = useState(null);
   const [account, setAccount] = useState(null);
   const [tribeSymbol, setTribeSymbol] = useState('');
@@ -13,75 +15,64 @@ function App() {
 
   const connectWallet = async () => {
     if (!window.ethereum) {
-      setStatus('MetaMask پیدا نشد. لطفاً افزونه را نصب کنید.');
+      setStatus(t('no_metamask'));
       return;
     }
     try {
-      // ابتدا سعی کن به Ganache سویچ کنی
-      await window.ethereum.request({
-        method: 'wallet_switchEthereumChain',
-        params: [{ chainId: '0x539' }]
-      });
-    } catch (switchError) {
-      // اگر شبکه وجود ندارد، آن را بساز
-      if (switchError.code === 4902) {
-        try {
-          await window.ethereum.request({
-            method: 'wallet_addEthereumChain',
-            params: [{
-              chainId: '0x539',
-              chainName: 'Ganache Local',
-              nativeCurrency: { name: 'ETH', symbol: 'ETH', decimals: 18 },
-              rpcUrls: ['http://127.0.0.1:8545'],
-            }]
-          });
-        } catch (addError) {
-          setStatus('نتوانستیم شبکه Ganache را اضافه کنیم. آیا Ganache اجراست؟');
-          return;
-        }
-      }
-    }
-
-    try {
       const prov = new ethers.BrowserProvider(window.ethereum);
       const accounts = await prov.send("eth_requestAccounts", []);
-      const signer = await prov.getSigner();
       setProvider(prov);
       setAccount(accounts[0]);
       setStatus('');
     } catch (err) {
-      setStatus('اتصال رد شد یا MetaMask قفل است.');
+      setStatus(t('connection_rejected'));
     }
   };
 
   const createTribe = async () => {
     if (!provider || !tribeSymbol || !tribeSeal) return;
     try {
-      setStatus('در حال ثبت تبار...');
+      setStatus(t('registering'));
       const signer = await provider.getSigner();
       const contract = new ethers.Contract(TRIBE_REGISTRY_ADDRESS, TribeRegistryABI.abi, signer);
       const tx = await contract.createTribe(tribeSymbol, tribeSeal);
       await tx.wait();
-      setStatus(`تبار ${tribeSymbol} با موفقیت ثبت شد!`);
+      setStatus(t('success', { symbol: tribeSymbol }));
       setTribeSymbol('');
       setTribeSeal('');
     } catch (err) {
-      setStatus(`خطا: ${err.reason || err.message}`);
+      setStatus(`${t('error')}: ${err.reason || err.message}`);
     }
   };
 
   return (
-    <div style={{
+    <div dir={direction} style={{
       fontFamily: "'Vazirmatn', sans-serif",
       background: '#f5f0e8',
       minHeight: '100vh',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      padding: '2rem'
+      padding: '2rem',
+      direction: direction
     }}>
-      <h1 style={{ color: '#c8392b', fontSize: '3rem' }}>دروازهٔ شاهنامه</h1>
-      <p style={{ color: '#8a8070' }}>تبار خود را ثبت کن و وفاداری را بسنج</p>
+      <div style={{ position: 'absolute', top: '1rem', right: '1rem' }}>
+        <button onClick={toggleLang} style={{
+          padding: '0.5rem 1rem',
+          background: '#0a0a0a',
+          color: '#f5f0e8',
+          border: '1px solid #8a8070',
+          borderRadius: '4px',
+          cursor: 'pointer',
+          fontFamily: 'Space Mono, monospace',
+          fontSize: '0.8rem'
+        }}>
+          {lang === 'en' ? 'FA' : 'EN'}
+        </button>
+      </div>
+
+      <h1 style={{ color: '#c8392b', fontSize: '3rem' }}>{t('title')}</h1>
+      <p style={{ color: '#8a8070' }}>{t('subtitle')}</p>
 
       {!account ? (
         <button onClick={connectWallet} style={{
@@ -93,21 +84,21 @@ function App() {
           cursor: 'pointer',
           fontSize: '1.2rem'
         }}>
-          اتصال کیف پول
+          {t('connect_wallet')}
         </button>
       ) : (
         <div style={{ width: '100%', maxWidth: '500px', textAlign: 'center' }}>
-          <p style={{ color: '#0a0a0a' }}>آدرس: {account.slice(0,6)}...{account.slice(-4)}</p>
+          <p style={{ color: '#0a0a0a' }}>{t('address_label')}: {account.slice(0,6)}...{account.slice(-4)}</p>
 
           <div style={{ marginTop: '2rem' }}>
             <input
-              placeholder="نماد تبار (مثلاً @x@)"
+              placeholder={t('symbol_placeholder')}
               value={tribeSymbol}
               onChange={e => setTribeSymbol(e.target.value)}
               style={{ width: '100%', padding: '0.5rem', marginBottom: '1rem', fontFamily: 'Vazirmatn' }}
             />
             <input
-              placeholder="مُهر تبار (مثلاً: من ثبت کردم)"
+              placeholder={t('seal_placeholder')}
               value={tribeSeal}
               onChange={e => setTribeSeal(e.target.value)}
               style={{ width: '100%', padding: '0.5rem', marginBottom: '1rem', fontFamily: 'Vazirmatn' }}
@@ -121,7 +112,7 @@ function App() {
               cursor: 'pointer',
               fontSize: '1.1rem'
             }}>
-              ثبت تبار
+              {t('register_button')}
             </button>
           </div>
 

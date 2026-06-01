@@ -1,0 +1,16 @@
+{
+  "app": {
+    "title": "The Gate of the Shahnameh",
+    "subtitle": "Register your Tribe and measure loyalty",
+    "connect_wallet": "Connect Wallet",
+    "address_label": "Address",
+    "symbol_placeholder": "Tribe Symbol (e.g. @x@)",
+    "seal_placeholder": "Tribe Seal (e.g. I recorded it)",
+    "register_button": "Register Tribe",
+    "registering": "Registering Tribe...",
+    "success": "Tribe {symbol} registered successfully!",
+    "error": "Error",
+    "no_metamask": "Wallet not found. Please install MetaMask or Trust Wallet.",
+    "connection_rejected": "Connection rejected or wallet locked."
+  }
+}

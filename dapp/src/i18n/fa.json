@@ -1,0 +1,16 @@
+{
+  "app": {
+    "title": "دروازهٔ شاهنامه",
+    "subtitle": "تبار خود را ثبت کن و وفاداری را بسنج",
+    "connect_wallet": "اتصال کیف پول",
+    "address_label": "آدرس",
+    "symbol_placeholder": "نماد تبار (مثلاً @x@)",
+    "seal_placeholder": "مُهر تبار (مثلاً: من ثبت کردم)",
+    "register_button": "ثبت تبار",
+    "registering": "در حال ثبت تبار...",
+    "success": "تبار {symbol} با موفقیت ثبت شد!",
+    "error": "خطا",
+    "no_metamask": "کیف پول پیدا نشد. لطفاً MetaMask یا Trust Wallet نصب کنید.",
+    "connection_rejected": "اتصال رد شد یا کیف پول قفل است."
+  }
+}
