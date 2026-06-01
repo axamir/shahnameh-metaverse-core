@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { ethers } from 'ethers';
 import TribeRegistryABI from './abis/TribeRegistry.json';
 
+const TRIBE_REGISTRY_ADDRESS = '0x2153aF28d9bC7e2E914F41D4b1a0FC3d98d750BC';
+
 function App() {
   const [provider, setProvider] = useState(null);
   const [account, setAccount] = useState(null);
@@ -9,17 +11,46 @@ function App() {
   const [tribeSeal, setTribeSeal] = useState('');
   const [status, setStatus] = useState('');
 
-  const TRIBE_REGISTRY_ADDRESS = '0xYOUR_ADDRESS_HERE';
-
   const connectWallet = async () => {
-    if (window.ethereum) {
+    if (!window.ethereum) {
+      setStatus('MetaMask پیدا نشد. لطفاً افزونه را نصب کنید.');
+      return;
+    }
+    try {
+      // ابتدا سعی کن به Ganache سویچ کنی
+      await window.ethereum.request({
+        method: 'wallet_switchEthereumChain',
+        params: [{ chainId: '0x539' }]
+      });
+    } catch (switchError) {
+      // اگر شبکه وجود ندارد، آن را بساز
+      if (switchError.code === 4902) {
+        try {
+          await window.ethereum.request({
+            method: 'wallet_addEthereumChain',
+            params: [{
+              chainId: '0x539',
+              chainName: 'Ganache Local',
+              nativeCurrency: { name: 'ETH', symbol: 'ETH', decimals: 18 },
+              rpcUrls: ['http://127.0.0.1:8545'],
+            }]
+          });
+        } catch (addError) {
+          setStatus('نتوانستیم شبکه Ganache را اضافه کنیم. آیا Ganache اجراست؟');
+          return;
+        }
+      }
+    }
+
+    try {
       const prov = new ethers.BrowserProvider(window.ethereum);
-      await prov.send("eth_requestAccounts", []);
+      const accounts = await prov.send("eth_requestAccounts", []);
       const signer = await prov.getSigner();
       setProvider(prov);
-      setAccount(await signer.getAddress());
-    } else {
-      alert('MetaMask نصب نیست.');
+      setAccount(accounts[0]);
+      setStatus('');
+    } catch (err) {
+      setStatus('اتصال رد شد یا MetaMask قفل است.');
     }
   };
 
