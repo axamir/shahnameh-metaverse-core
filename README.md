@@ -13,3 +13,12 @@ Governed by the [Tribes Protocol v1.1.0](https://github.com/axamir/shahnameh-of-
 
 **License:** MIT
 **Status:** Phase 0 — Genesis Scaffold
+
+---
+
+## 🌐 Languages
+
+- [English](README.md)
+- [فارسی](i18n/fa/README.md)
+
+More languages will be added as the civilization grows.
