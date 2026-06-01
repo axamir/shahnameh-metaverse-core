@@ -5,6 +5,12 @@
 
 ---
 
+## 🎥 Demo
+
+[![The Living Signal — Demo](https://img.youtube.com/vi/nAkrFp5Kaak/0.jpg)](https://youtu.be/nAkrFp5Kaak)
+
+Watch the first public demo of The Living Signal: a Tribe registered with an immutable Seal.
+
 ## What is this?
 
 **The Living Signal** is a verifiable, antifragile civilization protocol built on loyalty instead of wealth.
