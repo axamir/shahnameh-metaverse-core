@@ -10,7 +10,7 @@
     "registering": "Registering Tribe...",
     "success": "Tribe {symbol} registered successfully!",
     "error": "Error",
-    "no_metamask": "Wallet not found. Please install MetaMask or Trust Wallet.",
-    "connection_rejected": "Connection rejected or wallet locked."
+    "no_metamask": "Wallet not found.",
+    "connection_rejected": "Connection rejected."
   }
 }

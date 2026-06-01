@@ -1,2 +1,8 @@
-venv/
-dapp/node_modules/
+node_modules/
+cache/
+artifacts/
+dist/
+.env
+deployed_address.txt
+deployed_sepolia.json
+*.log

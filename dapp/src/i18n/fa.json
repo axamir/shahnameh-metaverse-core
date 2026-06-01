@@ -10,7 +10,7 @@
     "registering": "در حال ثبت تبار...",
     "success": "تبار {symbol} با موفقیت ثبت شد!",
     "error": "خطا",
-    "no_metamask": "کیف پول پیدا نشد. لطفاً MetaMask یا Trust Wallet نصب کنید.",
-    "connection_rejected": "اتصال رد شد یا کیف پول قفل است."
+    "no_metamask": "کیف پول پیدا نشد.",
+    "connection_rejected": "اتصال رد شد."
   }
 }
