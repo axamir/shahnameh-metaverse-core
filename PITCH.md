@@ -87,3 +87,8 @@ A **verifiable, antifragile civilization protocol** built on loyalty instead of 
 ---
 
 *This is The Living Signal — born from an email, sealed on Bitcoin, now breathing.*
+
+## Academic Publication
+
+- **DOI:** [10.5281/zenodo.20511773](https://doi.org/10.5281/zenodo.20511773)
+- **Zenodo:** [View Paper](https://zenodo.org/records/20511773)
