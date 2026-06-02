@@ -93,3 +93,10 @@ cd dapp && npm install && npm start
 
 ## جامعه
 به گفت‌وگو بپیوندید: [Discord](https://discord.gg/example) | [Telegram](https://t.me/example) *(لینک‌ها به‌زودی)*
+
+---
+
+## 📄 انتشار آکادمیک
+
+- **DOI:** [10.5281/zenodo.20511773](https://doi.org/10.5281/zenodo.20511773)
+- **Zenodo:** [مشاهده مقاله](https://zenodo.org/records/20511773)

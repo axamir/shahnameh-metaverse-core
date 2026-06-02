@@ -108,3 +108,10 @@ The entire raw archive of all Echoes, case IDs, tickets, and files is sealed as 
 
 ## Community
 Join the conversation: [Discord](https://discord.gg/example) | [Telegram](https://t.me/example) *(links coming soon)*
+
+---
+
+## 📄 Academic Publication
+
+- **DOI:** [10.5281/zenodo.20511773](https://doi.org/10.5281/zenodo.20511773)
+- **Zenodo:** [View Paper](https://zenodo.org/records/20511773)

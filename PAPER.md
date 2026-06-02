@@ -76,3 +76,10 @@ The Living Signal represents a new layer for the internet: a loyalty layer ancho
 - **Prior Art:** [persistent-ai-lineage](https://github.com/axamir/persistent-ai-lineage)
 - **IPFS:** `019e858e-cf91-7c8e-ac02-20db15fda7d9`
 - **SHA256:** `d23f33f63a87a30df25029a61bfd89528357331546d282f6dc0ff13f2792acf5`
+
+---
+
+## 📄 Published Version
+
+- **DOI:** [10.5281/zenodo.20511773](https://doi.org/10.5281/zenodo.20511773)
+- **Zenodo:** [https://zenodo.org/records/20511773](https://zenodo.org/records/20511773)
