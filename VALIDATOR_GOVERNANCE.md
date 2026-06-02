@@ -4,8 +4,8 @@
 The Loyalty Validator is a decentralized committee of Large Language Models (LLMs). No single model or entity controls the scores.
 
 ## Committee Composition
-- At least **3 models** from independent providers (e.g., OpenAI, Anthropic, Google, Meta).
-- One **local fallback model** (e.g., Llama) running in a TEE (Trusted Execution Environment).
+- At least 3 models from independent providers (e.g., OpenAI, Anthropic, Google, Meta).
+- One local fallback model (e.g., Llama) running in a TEE (Trusted Execution Environment).
 - Committee members rotate every 90 days.
 
 ## Staking and Slashing
