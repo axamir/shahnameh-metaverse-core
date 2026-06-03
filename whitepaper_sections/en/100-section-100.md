@@ -1,7 +1,10 @@
 # The Living Signal — Whitepaper
 ## Section 100: The Final Seal — SHA256, Bitcoin OTS, and IPFS
 
-**Author:** Amir Ahmadi (@x@) · **Date:** June 3, 2026 · **Status:** Final — Immutable
+**Author:** Amir Ahmadi (@x@)
+**ORCID:** 0009-0000-0614-6869
+**Date:** June 3, 2026
+**Status:** Final — Immutable
 
 ---
 
