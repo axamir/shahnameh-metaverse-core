@@ -4,7 +4,7 @@
 **Author:** Amir Ahmadi (@x@)
 **ORCID:** 0009-0000-0614-6869
 **Date:** June 3, 2026
-**Status:** Final — Immutable
+**Status:** Living Document v1.0 — Open to critique prior to Bitcoin sealing
 
 ---
 
