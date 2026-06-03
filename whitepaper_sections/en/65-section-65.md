@@ -16,6 +16,10 @@ If every unit of contribution earned the same reward, the system would incentivi
 
 ### 65.2 The Curve
 
+**Activity Inflation Penalty:** If a member performs more than 3× the median number of actions of their Tribe in a 7-day period, their Loyalty Score for that period is automatically reduced by 20%. This prevents Loyalty Farming via quantity-over-quality strategies. The penalty is enforced by `AntiWhale.sol` and monitored by the Oracle.
+
+### 65.3 The Ranj Value Curve
+
 ```
 Reward = k × (Ranj_Score)^α
 ```

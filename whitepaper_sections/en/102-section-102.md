@@ -49,7 +49,21 @@ The whitepaper now explicitly distinguishes between these two categories in ever
 
 The first 100 Wisdom NFTs will be distributed through a public, loyalty-weighted quadratic vote among all Tribe members with a Loyalty Score >50 at the time of distribution. The founder (@x@) is explicitly excluded from this initial distribution and has no special privilege in nominating or appointing Wisdom NFT holders. Subsequent Wisdom NFTs are awarded automatically by the protocol based on the 5-year sustained loyalty criterion defined in Section 84.
 
-### 102.5 Open Questions (To Be Resolved Before Sealing)
+### 102.4 Genesis Transition Period (90-Day Oracle Independence)
+
+To break the circular dependency between the Oracle and Wisdom NFT holders, a **Genesis Transition Period** of 90 days is established:
+
+1. **Days 1–90:** No Wisdom NFTs exist. Loyalty Scores are computed using ONLY hard, objective metrics:
+   - TAP staking duration (50% weight)
+   - Participation in simple on-chain votes (30% weight)
+   - Diversity of Tribe memberships (20% weight)
+   - NO subjective LLM judgment is used during this period.
+2. **Day 91:** The first 100 Wisdom NFTs are distributed via Loyalty-weighted Quadratic Vote among members with the highest objective scores from the Transition Period.
+3. **Day 92 onward:** The LLM Oracle activates, now subject to oversight by Wisdom NFT holders who were selected WITHOUT the Oracle they oversee.
+
+**Founder Bond:** @x@ places a **10,000 TAP bond** in an escrow contract. If, within 5 years, the Wisdom NFT holders are proven to have become a corrupt oligarchy, this bond is distributed to all active members. This is an anti-oligarchy insurance.
+
+### 102.6 Open Questions (To Be Resolved Before Sealing)
 
 1. Exact economic parameters for validator staking and slashing.
 2. Formal game-theoretic analysis of collusion resistance.
