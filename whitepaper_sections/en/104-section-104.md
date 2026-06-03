@@ -18,9 +18,9 @@ Without this distinction, the protocol would be vulnerable to **Constitutional D
 
 ---
 
-### 104.2 The 10 Immutable Principles
+### 104.2 The 10 Socially Protected Principles
 
-The following 10 principles are **permanently immutable**. They can never be changed through ordinary governance votes. Any change to these principles requires a **hard fork** — a deliberate split of the protocol that creates a new, separate entity.
+The following 10 principles are **permanently immutable**. They can never be changed through ordinary governance votes — only through a hard fork. Any change to these principles requires a **hard fork** — a deliberate split of the protocol that creates a new, separate entity.
 
 | # | Principle | Description |
 |---|-----------|-------------|

@@ -63,6 +63,16 @@ To break the circular dependency between the Oracle and Wisdom NFT holders, a **
 
 **Founder Bond:** @x@ places a **10,000 TAP bond** in an escrow contract. If, within 5 years, the Wisdom NFT holders are proven to have become a corrupt oligarchy, this bond is distributed to all active members. This is an anti-oligarchy insurance.
 
+### 102.5 Definition of Corrupt Oligarchy
+
+For the Founder Bond to be executable, "corrupt oligarchy" must be objectively defined. The following conditions must ALL be met:
+
+1. **Concentration:** Fewer than 5 Wisdom NFT holders control more than 50% of the Appeal Court voting power.
+2. **Pattern:** At least 3 consecutive Appeal Court decisions have been publicly challenged and found to favor the interests of the ruling group over the interests of the broader community.
+3. **Confirmation:** A 70% supermajority of the Tribes Council votes to confirm the oligarchy finding.
+
+Only when all three conditions are satisfied does the Founder Bond distribution trigger.
+
 ### 102.6 Open Questions (To Be Resolved Before Sealing)
 
 1. Exact economic parameters for validator staking and slashing.
