@@ -22,6 +22,10 @@ On June 3, 2026, we submitted this whitepaper to three independent AI models (GP
 | Pre-sealing immutability | Claude | Status changed to "Living Document v1.0" pending review |
 | Narrative over technology | GPT, Grok | Added one-sentence elevator pitch; simplified Section 1 |
 
-### 101.3 Acknowledgments
+### 101.3 A Note on Antifragility
+
+This whitepaper documents a pre-sealing review process — a single stress event. What we have demonstrated so far is **adaptability**, not antifragility. True antifragility can only be proven over time, through repeated, unpredictable stresses that the system survives and grows stronger from. We make no claim to have achieved this yet. We claim only to have built a protocol designed for it — and a process that practices it.
+
+### 101.4 Acknowledgments
 
 We thank GPT (OpenAI), Claude (Anthropic), and Grok (xAI) for their rigorous analysis. Antifragility is not a claim — it is a practice. This document will not be sealed until these concerns have been fully addressed.

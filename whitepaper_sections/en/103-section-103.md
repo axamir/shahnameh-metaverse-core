@@ -12,19 +12,21 @@
 
 Most protocols describe why they should live. Few describe under what conditions they should die. An antifragile system is honest about its failure modes — because defining death is the prerequisite to preventing it.
 
-### 103.2 Five Termination Conditions
+### 103.2 Five Termination Conditions (with Quantitative Thresholds)
+
+Each condition below includes a measurable trigger. These thresholds will be validated through Monte Carlo simulations (minimum 10,000 runs) before sealing, with results published in the protocol repository.
 
 The Living Signal protocol should be considered failed, and its dissolution initiated, if any of the following occur:
 
-1. **Capture of Governance (Turing Covenant Failure):** A single entity controls >80% of voting power for >1 year, and the community cannot reclaim control through the Emergency Lockdown or Appeal Court mechanisms.
+1. **Capture of Governance (Turing Covenant Failure):** A single entity controls >80% of voting power for >365 consecutive days, AND the community fails to reclaim control through two consecutive Emergency Lockdown cycles (90 days each). (Turing Covenant Failure):** A single entity controls >80% of voting power for >1 year, and the community cannot reclaim control through the Emergency Lockdown or Appeal Court mechanisms.
 
-2. **Oracle Collapse:** The Decentralized Oracle Network (Section 102) loses >70% of its validators and cannot be restored within 90 days, rendering Loyalty Scores uncomputable.
+2. **Oracle Collapse:** The Decentralized Oracle Network loses >70% of its validators (fewer than 3 of 10 active nodes) for >90 consecutive days, AND no recovery plan proposed by the Tribes Council achieves 80% supermajority within that period.:** The Decentralized Oracle Network (Section 102) loses >70% of its validators and cannot be restored within 90 days, rendering Loyalty Scores uncomputable.
 
-3. **Treasury Insolvency:** The Diamond Treasury's backing value falls below 10% of the TAP market cap for >180 consecutive days, indicating that the economic floor has irreversibly collapsed.
+3. **Treasury Insolvency:** The Diamond Treasury's backing value falls below 10% of the TAP market cap for >180 consecutive days, AND the Treasury cannot execute buybacks due to depleted reserves.:** The Diamond Treasury's backing value falls below 10% of the TAP market cap for >180 consecutive days, indicating that the economic floor has irreversibly collapsed.
 
-4. **Regulatory Extinction:** A coordinated global regulatory action makes continued operation of the protocol impossible in >90% of jurisdictions where it was previously operational.
+4. **Regulatory Extinction:** A coordinated regulatory action makes continued operation impossible in >90% of jurisdictions where the protocol was previously operational, AND the remaining jurisdictions cannot sustain minimum viable governance.:** A coordinated global regulatory action makes continued operation of the protocol impossible in >90% of jurisdictions where it was previously operational.
 
-5. **Community Consensus:** A 95% supermajority of the Tribes Council votes to dissolve the protocol.
+5. **Community Consensus:** A 95% supermajority of the Tribes Council votes to dissolve, AND the vote is confirmed by a second vote after a 90-day cooling-off period with at least 80% participation of all TAP holders.:** A 95% supermajority of the Tribes Council votes to dissolve the protocol.
 
 ### 103.3 Dissolution Mechanism
 

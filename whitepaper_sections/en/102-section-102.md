@@ -45,7 +45,11 @@ The whitepaper now explicitly distinguishes between these two categories in ever
 | LLM providers shut down API | Validators switch to alternative models; self-hosted fallback |
 | ZK-Prover compromised | Multiple independent ZK implementations required; diversity in proof systems |
 
-### 102.4 Open Questions (To Be Resolved Before Sealing)
+### 102.4 Initial Distribution of Wisdom NFTs (Anti-Oligarchy Measure)
+
+The first 100 Wisdom NFTs will be distributed through a public, loyalty-weighted quadratic vote among all Tribe members with a Loyalty Score >50 at the time of distribution. The founder (@x@) is explicitly excluded from this initial distribution and has no special privilege in nominating or appointing Wisdom NFT holders. Subsequent Wisdom NFTs are awarded automatically by the protocol based on the 5-year sustained loyalty criterion defined in Section 84.
+
+### 102.5 Open Questions (To Be Resolved Before Sealing)
 
 1. Exact economic parameters for validator staking and slashing.
 2. Formal game-theoretic analysis of collusion resistance.

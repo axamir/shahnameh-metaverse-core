@@ -16,7 +16,11 @@ This whitepaper, upon completion of all 100 sections, will be sealed with the sa
 2. **Bitcoin OpenTimestamps:** The hash will be sealed on the Bitcoin blockchain.
 3. **IPFS Permanent Storage:** The PDF and Markdown versions will be stored permanently on IPFS and Arweave.
 
-### 100.2 Verification
+### 100.2 Important Distinction: Sealing vs. Validation
+
+**Bitcoin anchoring certifies document existence and integrity, not correctness, security, economic sustainability, or future success.** The SHA256 and OpenTimestamps prove that this whitepaper existed at a specific point in time. They do not prove that every claim within it is true. That validation comes from public review, smart contract audits, economic simulations, and the test of time.
+
+### 100.3 Verification
 
 Any person, at any time, can verify that this whitepaper existed at least as early as its claimed date. They need not trust the author. They need only trust mathematics.
 
