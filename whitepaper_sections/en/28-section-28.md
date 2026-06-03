@@ -74,7 +74,7 @@ Founder TAP allocations are subject to a **4-year linear vesting schedule** and 
 
 ---
 
-### 28.3 Formal Sustainability Proof
+### 28.3 Logical Sustainability Argument (Not a Formal Proof)
 
 The Empathy Pool follows a convergent geometric series:
 
