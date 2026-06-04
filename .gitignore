@@ -7,3 +7,40 @@ deployed_address.txt
 deployed_sepolia.json
 *.log
 .env
+# Temporary analysis files
+_analyze_econ.js
+_arweave_upload.js
+_check_sections.js
+_econ_summary.txt
+_econ_tweets.txt
+_extract_econ.js
+_extract_grok_raw.js
+_fetch_grok.js
+_grok_econ.js
+_grok_econ.txt
+_ipfs_upload.js
+GROK_RAW_ARCHIVE.md
+
+# Keys and configs
+arweave-key.json
+
+# Build artifacts and temporary files
+paper.aux
+test_tribe.js
+dapp/demo.html
+
+# Node and dependencies
+bridge/
+dapp/package-lock.json
+dapp/package.json
+hardhat.config.js
+package-lock.json
+package.json
+node_modules/
+
+# Test folders
+test/
+scripts/deploy_registry.js
+scripts/deploy_sepolia.js
+scripts/test_tribe_registry.js
+.DS_Store
